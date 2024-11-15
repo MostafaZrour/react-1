@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Product from "./Product";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 
 function App() {
+  const [products, setPro] = useState([
+    {
+      id: 1,
+      title: "PC Portable Gamer HP VICTUS",
+      price: "7490 DH",
+      thumbnail: "HP16D0195NF.jpg",
+    },
+    {
+      id: 2,
+      title: "PC Portable Gamer HP VICTUS",
+      price: "2190 DH",
+      thumbnail: "HP14424U3EA.jpg",
+    },
+    {
+      id: 3,
+      title: "Pc Portable Chromebook Acer",
+      price: "3640 DH",
+      thumbnail: "NXATHEF002.jpg",
+    },
+    {
+      id: 4,
+      title: "PC Portable - HUAWEI",
+      price: "1270 DH",
+      thumbnail: "HUA6901443442959.jpg",
+    },
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="row mt-5">
+        {products.map((ele) => {
+          return <Product data={ele} />;
+        })}
+      </div>
     </div>
   );
 }
