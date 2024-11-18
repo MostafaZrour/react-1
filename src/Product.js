@@ -1,6 +1,6 @@
-function Product({data:{id ,title , price, thumbnail}}) {
+function Produc({data:{id ,title , price, thumbnail}}) {
   return (
-    <div className="col-3" key={id}>
+    <div className="col-3">
       <div className="card shadow-sm">
         <img className="bd-placeholder-img card-img-top" src={"pictures/" + thumbnail} alt="" />
         <div className="card-body">
@@ -15,4 +15,4 @@ function Product({data:{id ,title , price, thumbnail}}) {
   );
 }
 
-export default Product ;
+export default Produc ;
